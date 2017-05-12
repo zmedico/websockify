@@ -69,6 +69,9 @@ class FakeSocket(object):
         else:
             return StringIO(self._data.decode('latin_1'))
 
+    def sendall(self, data, flags=0):
+        pass
+
 
 class WebSockifyRequestHandlerTestCase(unittest.TestCase):
     def setUp(self):
